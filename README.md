@@ -27,16 +27,21 @@ This repository documents my journey through DSA, focusing on mastering concepts
 
 ```
 portfolio/
-├── public/                 # Contains static files such as images, icons, and other assets.
-│   └── .../            
-├── src/                    # Main source code folder for the React application.
-│   ├── css/                # Contains css
-│   ├── images/             # Images used
-│   ├── App.js              # The root component that defines the overall structure.
-│   ├── index.js  
-│   └── ...           # Main entry point for the application.
-├── tailwind.config.js      # Configuration file for Tailwind CSS (coming soon).
-└── README.md               # Project documentation.
+├── Binary Tree/
+│   ├── Algos            
+│   └── Problems        
+├── Queues/             
+│   ├── Algos               
+│   └── Problems
+├── Recursion Problems/                           
+│   └── Problems
+├── Sorting Algos/             
+│   ├── Algos               
+│   └── Problems
+├── Stacks/             
+│   ├── Algos               
+│   └── Problems
+└── README.md              
 ```
 
 ---
