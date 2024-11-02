@@ -81,7 +81,7 @@ The `StudyMaterial` folder houses organized notes, cheat sheets, and essential r
 
 1. **Clone the repo**:
    ```
-   git clone https://github.com/yourusername/DSA-Journey.git
+   git clone https://github.com/pinakkk/dsa-cpp.git
    ```
 2. **Ready to go**
 
