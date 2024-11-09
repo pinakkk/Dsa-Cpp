@@ -55,6 +55,7 @@ portfolio/
 - Sorting & Searching Algorithms 
 - Recursion & Dynamic Programming
 - Hashing & Heaps
+- Important Problems
 - More to come...
 
 ---
