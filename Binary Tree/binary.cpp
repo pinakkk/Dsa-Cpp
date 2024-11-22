@@ -106,9 +106,9 @@ Node *deleteNode(Node *root, int data){
         }
 
         // case 3 -> node has two children. find in order successor 
-        Node *temp = findMin(root->right);
-        root->data = temp->data;
-        root->right = deleteNode(root->right, temp->data);
+        // Node *temp = findMin(root->right);
+        // root->data = temp->data;
+        // root->right = deleteNode(root->right, temp->data);
 
     }
 
@@ -144,5 +144,9 @@ int main(){
     cout << "Postorder traversal: ";
     postorder(root);
     cout << endl;
+
+    // Find and print minimum and maximum values
+    cout << "Minimum value: " << findMin(root)->data << endl;
+    cout << "Maximum value: " << findMax(root)->data << endl;
     return 0;
 }
