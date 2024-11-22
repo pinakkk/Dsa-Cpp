@@ -51,7 +51,7 @@ public:
 
             // enqueue all unvisited neighbours
 
-            for(int neighbour : adjList[nodes]){
+            for(int neighbour : adjList[node]){
                 if(visited.find(neighbour) == visited.end()){ // if neighbour is not visited;
                     visited.insert(neighbour);
                     q.push(neighbour);
@@ -59,7 +59,29 @@ public:
             }
         }
     }
+
+
+    // DFS Using Recursion
+
+    void DFS(int start){
+        set<int> visited;
+        DFSHelper(start, visited);
+    }
+
+    void DFSHelper(int node, set<int> & visited){
+        visited.insert(node);
+        cout << node << " ";
+
+        for(int neighbour : adjList[node]){
+            if(visited.find(neighbour) == visited.end()){
+                // Not visited 
+                DFSHelper(neighbour, visited);
+            }
+        }
+    }
+    
 };
+
 int main()
 {
     int nodes,edges;
