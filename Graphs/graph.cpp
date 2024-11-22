@@ -42,8 +42,8 @@ public:
         // Set -> to mark as visited;
         set<int> visited;
 
-        visited.insert(start);
         q.push(start);
+        visited.insert(start);
 
         while (!q.empty()) {
             int node = q.front();
@@ -54,8 +54,8 @@ public:
 
             for(int neighbour : adjList[node]){
                 if(visited.find(neighbour) == visited.end()){ // if neighbour is not visited;
-                    visited.insert(neighbour);
                     q.push(neighbour);
+                    visited.insert(neighbour);
                 }
             }
         }
