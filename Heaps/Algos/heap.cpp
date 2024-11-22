@@ -113,6 +113,21 @@ void heapify(int arr[], int size, int i)
     }
 }
 
+
+// Heap Sort
+// 1. First index with last index swap
+// 2. Decrease size
+// 3. Root node to correct position
+void heapSort(int arr[], int n){
+    int size = n;
+
+    while(size>1){
+        swap(arr[size], arr[1]);
+        size--;
+        heapify(arr, size, 1);
+    }
+}
+
 int main()
 {
 
