@@ -2,6 +2,7 @@
 #include <vector>
 #include <queue>
 #include <set>
+#include <stack>
 using namespace std;
 
 class Graph
@@ -79,7 +80,29 @@ public:
             }
         }
     }
-    
+
+    // DFS Using stack
+    void DFSUsingStack(int start){
+        vector<bool> visited(nodes,false); //Track of visited nodes
+        stack<int> s;
+        
+        s.push(start);
+        visited[start] = true;
+        while(!s.empty()){
+            int node = s.top();
+            s.pop();
+            cout << node << " ";
+
+            for(int neighbour: adjList[node]){
+                // if not visited
+                if(!visited[neighbour]){
+                    s.push(neighbour);
+                    visited[neighbour] = true;
+                }
+            }
+        }
+    }
+
 };
 
 int main()
@@ -100,6 +123,17 @@ int main()
     cout <<  "BFS Starting from node : "; 
 
     g.BFS(startNode);
+    cout << endl;
+
+    cout << "DFS Using Recursion : ";
+
+    g.DFS(startNode);
+    cout << endl;
+
+    cout << "DFS Using Stack : ";
+    g.DFSUsingStack(startNode);
+
+    cout << endl;
 
     return 0;
 }
