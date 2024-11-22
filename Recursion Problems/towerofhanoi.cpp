@@ -16,6 +16,7 @@ void moveDisk(int disks, int from, int to, int aux){
     moveDisk(disks -1, aux, to, from);
 
 }
+
 int main(){
     int disks;
     cin >> disks;

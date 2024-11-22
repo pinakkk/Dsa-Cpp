@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 using namespace std;
 
 class heap
@@ -97,11 +98,11 @@ void heapify(int arr[], int size, int i)
     int left = 2 * i;
     int right = 2 * i + 1;
 
-    if (left < size && arr[largest] < arr[left])
+    if (left <= size && arr[largest] < arr[left])
     {
         largest = left;
     }
-    if (right < size && arr[largest] < arr[right])
+    if (right <= size && arr[largest] < arr[right])
     {
         largest = right;
     }
@@ -157,6 +158,35 @@ int main()
         cout << arr[i] << " ";
     }
     cout << endl;
+
+    heapSort(arr, n);
+    cout << "printing the heap:" << endl;
+
+    for(int i=0; i<n; i++){
+        cout << arr[i] << " ";
+    }
+
+    // max Heap
+
+    priority_queue<int> maxheap;
+    maxheap.push(2);
+    maxheap.push(1);
+    maxheap.push(5);
+    cout << "top: " << maxheap.top();
+    maxheap.pop();
+    cout << "top: " << maxheap.top();
+
+
+
+    // Min Heap using pq
+    priority_queue<int, vector<int>, greater<int>> minheap;
+
+    minheap.push(2);
+    minheap.push(1);
+    minheap.push(5);
+    cout << "top: " << minheap.top();
+    minheap.pop();
+    cout << "top: " << minheap.top();
 
     return 0;
 }
