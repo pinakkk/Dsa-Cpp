@@ -75,12 +75,12 @@ public:
 
             if (leftIndex < size && arr[i] < arr[leftIndex])
             {
-                swap(leftIndex, arr[leftIndex]);
+                swap(arr[i], arr[leftIndex]);
                 i = leftIndex;
             }
             else if (rightIndex < size && arr[i] < arr[rightIndex])
             {
-                swap(rightIndex, arr[rightIndex]);
+                swap(arr[i], arr[rightIndex]);
                 i = rightIndex;
             }
             else
