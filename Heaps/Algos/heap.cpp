@@ -119,13 +119,18 @@ void heapify(int arr[], int size, int i)
 // 1. First index with last index swap
 // 2. Decrease size
 // 3. Root node to correct position
-void heapSort(int arr[], int n){
-    int size = n;
-
-    while(size>1){
-        swap(arr[size], arr[1]);
+void heapSort(int arr[], int n) {
+    
+    int size = n;  // heap size starts from n
+    while (size > 1) {
+        // Swap the root (arr[0]) with the last element in the heap
+        swap(arr[0], arr[size - 1]);
+        
+        // Reduce the heap size by 1 (excluding the last element)
         size--;
-        heapify(arr, size, 1);
+        
+        // Call heapify to restore the max-heap property
+        heapify(arr, size, 0); // Heapify the root (index 0) of the reduced heap
     }
 }
 
