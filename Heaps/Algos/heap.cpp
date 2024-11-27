@@ -102,6 +102,7 @@ void heapify(int arr[], int size, int i)
     {
         largest = left;
     }
+
     if (right <= size && arr[largest] < arr[right])
     {
         largest = right;
@@ -109,7 +110,7 @@ void heapify(int arr[], int size, int i)
 
     if (largest != i)
     {
-        swap(arr[largest], arr[i]);
+        swap(arr[i], arr[largest]);
         heapify(arr, size, largest);
     }
 }
