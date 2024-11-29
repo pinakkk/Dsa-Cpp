@@ -1,20 +1,22 @@
 #include <iostream>
 using namespace std;
 
-void selectionSort(int arr[], int size){
-    for(int i=0; i<size; i++){
-        int minIndex = i;
-        for(int j= i+1; j<size; j++){
-            if(arr[j]  < arr[minIndex]){
-                minIndex = j;
-            }
+void insertionSort(int arr[], int size){
+    for(int i=1; i<size; i++){
+        int key = arr[i];
+        int j = i -1;
+
+        while(j>=0 && arr[j] > key){
+            arr[j+1] = arr[j];
+            j--;
         }
-        swap(arr[minIndex], arr[i]);
+        arr[j+1] = key;
     }
-} 
+}
 
 int main(){
-    int n;
+
+     int n;
 
     // Input array size and elements
     cout << "Enter the number of elements: ";
@@ -26,8 +28,7 @@ int main(){
         cin >> arr[i];
     }
 
-    // Perform selection sort
-    selectionSort(arr, n);
+    insertionSort(arr, n);
 
     // Output sorted array
     cout << "Sorted array: ";
